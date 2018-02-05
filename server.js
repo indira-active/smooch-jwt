@@ -4,7 +4,7 @@ const app = express();
 const jwt = require('jsonwebtoken');
 const KEY_ID = 'app_5a70141be964c6003fe08afc';
 const SECRET = 'hIraqmK_mDq53XembMweqa86';
-// Constants
+
 const PORT = 8080;
 const HOST = '0.0.0.0';
 
@@ -35,4 +35,5 @@ app.get('/', (req,res)=>{
 
 
 app.listen(PORT, HOST);
+
 console.log(`Running on http://${HOST}:${PORT}`);
