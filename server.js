@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-
+const env = require('node-env-file');
 const jwt = require('jsonwebtoken');
-const KEY_ID = 'app_5a70141be964c6003fe08afc';
-const SECRET = 'hIraqmK_mDq53XembMweqa86';
+env(__dirname + '/.env');
+const KEY_ID = process.env.KEY_ID;
+const SECRET = process.env.SECRET;
 
 const PORT = 8080;
-const HOST = '0.0.0.0';
 
 const signJwt = function(userId) {
     return jwt.sign({
@@ -34,6 +34,6 @@ app.get('/', (req,res)=>{
 	});
 
 
-app.listen(PORT, HOST);
+app.listen(PORT);
 
-console.log(`Running on http://${HOST}:${PORT}`);
+console.log(`Running on Port:${PORT}`);
