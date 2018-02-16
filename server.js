@@ -25,7 +25,7 @@ const signJwt = function(userId) {
 
 
 
-app.get('/cs', (req,res)=>{
+app.get('/', (req,res)=>{
 
 	const userId = req.query.userId;
 
