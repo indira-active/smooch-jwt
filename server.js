@@ -31,7 +31,7 @@ app.get('/', (req,res)=>{
 	});
 
 const port = u.normalizePort(process.env.PORT || PORT);
-app.set('port',PORT);
+app.set('port',port);
 const server = http.createServer(app);
 server.listen(PORT);
 server.on('error', u.onError);
