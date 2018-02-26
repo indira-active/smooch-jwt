@@ -1,29 +1,26 @@
 const express = require('express');
 const app = express();
 const env = require('node-env-file');
-const jwt = require('jsonwebtoken');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 env(__dirname + '/.env');
+const http = require('http')
+
 const KEY_ID = process.env.KEY_ID;
 const SECRET = process.env.SECRET;
+const PORT = '8080';
+const u = require('./utility')
+const signJwt = require('./jwt');
 
-const PORT = 8080;
-
-const signJwt = function(userId) {
-    return jwt.sign({
-        scope: 'appUser',
-        userId: userId
-    },
-    SECRET,
-    {
-        header: {
-            alg: 'HS256',
-            typ: 'JWT',
-            kid: KEY_ID
-        }
-    });
-}
-
-
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+      extended: false
+  }));
+app.use(cookieParser());
+app.use(cors());
 
 app.get('/', (req,res)=>{
 
@@ -33,7 +30,9 @@ app.get('/', (req,res)=>{
 
 	});
 
-
-app.listen(PORT);
-
-console.log(`Running on Port:${PORT}`);
+const port = u.normalizePort(process.env.PORT || PORT);
+app.set('port',PORT);
+const server = http.createServer(app);
+server.listen(PORT);
+server.on('error', u.onError);
+server.on('listening', ()=>u.onListening(server));
