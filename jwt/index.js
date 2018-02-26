@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
-const KEY_ID = process.env.KEY_ID;
-const SECRET = process.env.SECRET; 
-
+const KEY_ID = process.env.node_env === 'production'?process.env.KEY_ID:process.env.KEY_ID1;
+const SECRET = process.env.node_env === 'production'?process.env.SECRET:process.env.SECRET1;
 /** @function
  * @name signJwt
  * will use the SECRET and KEY_ID to create a unique jwt for the smooch instantiation

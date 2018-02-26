@@ -7,8 +7,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 env(__dirname + '/.env');
 const http = require('http')
-const KEY_ID = process.env.node_env === 'production'?process.env.KEY_ID:process.env.KEY_ID1;
-const SECRET = process.env.node_env === 'production'?process.env.SECRET:process.env.SECRET1;
 const PORT = 8080;
 const signJwt = require('./jwt');
 
