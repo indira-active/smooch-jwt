@@ -4,26 +4,24 @@
   "description": "",
   "main": "jwt.js",
   "dependencies": {
-    "assert": "1.4.1",
     "body-parser": "1.18.2",
     "cookie-parser": "1.4.3",
     "cors": "2.8.4",
     "express": "^4.16.2",
     "jsdoc": "3.5.5",
     "jsonwebtoken": "^8.1.1",
-    "mocha": "5.0.1",
     "morgan": "1.9.0",
-    "njwt": "0.4.0",
     "node-env-file": "^0.1.8"
   },
   "devDependencies": {
+    "assert": "1.4.1",
     "mocha": "5.0.1",
-    "node-env-file": "^0.1.8"
+    "njwt": "0.4.0"
   },
   "scripts": {
     "test": "KEY_ID=app_5a70141be964c6003fe08afc SECRET=hIraqmK_mDq53XembMweqa86 mocha jwt/test.js",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Andrew Williams",
   "license": "ISC"
 }
