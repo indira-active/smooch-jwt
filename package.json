@@ -22,6 +22,11 @@
     "test": "KEY_ID=app_5a70141be964c6003fe08afc SECRET=hIraqmK_mDq53XembMweqa86 mocha jwt/test.js",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:indira-active/smooch-jwt.git"
+  },
   "author": "Andrew Williams",
-  "license": "ISC"
+  "license": "UNLICENSED",
+  "private": true
 }
