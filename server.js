@@ -5,10 +5,12 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-env(__dirname + '/.env');
 const http = require('http')
 const PORT = 8080;
 const signJwt = require('./jwt');
+if(process.env.NODE_ENV !== 'production'){
+	env(__dirname + '/.env')
+}
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
