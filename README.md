@@ -5,6 +5,11 @@
 Is a node.js service that provides JWT authentication for live chat support on indiraactive.com via the Smooch.io platform.
 
 # Environment
+Dependencies:
+	
+	docker
+	docker-compose
+
 Create a .env file with the following variables set:  
 
     KEY_ID1  
