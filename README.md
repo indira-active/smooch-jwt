@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/indira-active/smooch-jwt.svg?token=s8nDqBPzyxfbb3fVZTFy&branch=master)](https://travis-ci.com/indira-active/smooch-jwt)
+[![CircleCI](https://circleci.com/gh/indira-active/smooch-jwt.svg?style=svg)](https://circleci.com/gh/indira-active/smooch-jwt)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b255419a3acc43f1aafb5f0bf2c8a94f)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=indira-active/smooch-jwt&amp;utm_campaign=Badge_Grade)
 
 # smooch-jwt
