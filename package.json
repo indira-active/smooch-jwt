@@ -15,11 +15,15 @@
   },
   "devDependencies": {
     "assert": "1.4.1",
+    "coveralls": "^3.0.0",
+    "jscoverage": "^0.6.0",
     "mocha": "5.0.1",
-    "njwt": "0.4.0"
+    "njwt": "0.4.0",
+    "nodeunit": "^0.11.2"
   },
   "scripts": {
     "test": "KEY_ID=app_5a70141be964c6003fe08afc SECRET=hIraqmK_mDq53XembMweqa86 mocha jwt/test.js",
+    "coveralls": "jscoverage jwt && QUICKSORT_COV=1 nodeunit --reporter=lcov jwt | coveralls",
     "start": "node server.js"
   },
   "repository": {
