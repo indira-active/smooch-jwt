@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "KEY_ID=app_5a70141be964c6003fe08afc SECRET=hIraqmK_mDq53XembMweqa86 mocha jwt/test.js",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "start": "node server.js"
   },
   "repository": {
