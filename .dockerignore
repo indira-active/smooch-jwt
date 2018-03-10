@@ -1,0 +1,4 @@
+#.git
+.env
+.nyc_output
+coverage.lcov
