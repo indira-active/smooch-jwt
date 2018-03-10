@@ -20,7 +20,7 @@ RUN npm install
 FROM dependencies AS test
 COPY . .
 RUN npm test
-RUN npm coverage
+RUN npm run coverage
 
 
 # ---- Release ----
