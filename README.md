@@ -6,7 +6,7 @@ Is a node.js service that provides JWT authentication for live chat support on i
 
 # Environment
 Dependencies:
-	
+	npm
 	docker
 	docker-compose
 
@@ -15,14 +15,25 @@ Create a .env file with the following variables set:
     KEY_ID1  
     SECRET1
 
-# Build local
-    docker-compose build
-     # Note this will be cached. Re-run build or add --build to compose up commands to rebuild.
 
-# Test local
+# Development
+    # Install dependencies & devDependencies
+    npm install
+    # Start server
+    npm start
+    # Run tests
+    npm test
+
+
+# Production
+## Build local
+    docker-compose build
+    # Note this will be cached. Re-run build or add --build to compose up commands to rebuild.
+
+## Test local
     docker-compose -f docker-compose-test.yml up
     # Use -d to detach and run in background
 
-# Run local
+## Run local
     docker-compose up 
     # Use -d to detach and run in background
