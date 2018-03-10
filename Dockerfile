@@ -1,5 +1,6 @@
 # ---- Base ----
 FROM node:carbon as base
+LABEL maintainer="Nathan Guenther <nathang@indiraactive.com>"
 
 # Create app directory
 WORKDIR /usr/src/app
