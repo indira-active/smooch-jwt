@@ -9,7 +9,7 @@
     "cors": "2.8.4",
     "express": "^4.16.2",
     "jsdoc": "3.5.5",
-    "jsonwebtoken": "^8.1.1",
+    "jsonwebtoken": "^8.2.0",
     "morgan": "1.9.0",
     "node-env-file": "^0.1.8"
   },
@@ -19,11 +19,12 @@
     "istanbul": "^0.4.5",
     "mocha": "5.0.1",
     "njwt": "0.4.0",
-    "nodeunit": "^0.11.2"
+    "nodeunit": "^0.11.2",
+    "nyc": "^11.4.1"
   },
   "scripts": {
     "test": "KEY_ID=app_5a70141be964c6003fe08afc SECRET=hIraqmK_mDq53XembMweqa86 mocha jwt/test.js",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha ./jwt/test.js --report lcovonly -- -R spec && codecov",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "start": "node server.js"
   },
   "repository": {
