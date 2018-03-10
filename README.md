@@ -1,5 +1,6 @@
 [![CircleCI](https://circleci.com/gh/indira-active/smooch-jwt.svg?style=svg)](https://circleci.com/gh/indira-active/smooch-jwt)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b255419a3acc43f1aafb5f0bf2c8a94f)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=indira-active/smooch-jwt&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/indira-active/smooch-jwt/branch/master/graph/badge.svg?token=08UPViGYsf)](https://codecov.io/gh/indira-active/smooch-jwt)
 
 # smooch-jwt
 Is a node.js service that provides JWT authentication for live chat support on indiraactive.com via the Smooch.io platform.
