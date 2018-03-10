@@ -24,6 +24,8 @@ Create a .env file with the following variables set:
     npm start
     # Run tests
     npm test
+    # Check test coverage
+    npm run coverage
 
 
 # Production
