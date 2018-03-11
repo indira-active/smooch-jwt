@@ -19,6 +19,7 @@ RUN npm install
 
 # ---- Test ----
 FROM base AS test
+
 COPY . .
 RUN npm test
 RUN npm run coverage
@@ -26,7 +27,7 @@ RUN npm run coverage
 
 # ---- Release ----
 FROM base AS release
-
+ARG CODECOV_TOKEN
 # Pull only prod dependencies
 COPY --from=base /usr/src/app/prod_node_modules ./node_modules
 # Pull source
