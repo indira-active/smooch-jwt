@@ -3,6 +3,8 @@ services:
   app:
     build:
       context: .
+      args:
+        - CODECOV_TOKEN=$CODECOV_TOKEN
     image: smooch-jwt
     volumes:
       - .:/app
