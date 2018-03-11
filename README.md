@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/indira-active/smooch-jwt.svg?style=svg)](https://circleci.com/gh/indira-active/smooch-jwt)
+[![CircleCI](https://circleci.com/gh/indira-active/smooch-jwt.svg?style=svg&circle-token=9ffe33b2fb5be376d47bcd0bd914a84e11c3ef3d)](https://circleci.com/gh/indira-active/smooch-jwt)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b255419a3acc43f1aafb5f0bf2c8a94f)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=indira-active/smooch-jwt&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/indira-active/smooch-jwt/branch/master/graph/badge.svg?token=08UPViGYsf)](https://codecov.io/gh/indira-active/smooch-jwt)
 
@@ -30,14 +30,13 @@ Create a .env file with the following variables set:
 
 
 # Production
-## Build local
+## Build & test local
     docker-compose build
-    # Note this will be cached. Re-run build or add --build to compose up commands to rebuild.
+    # Note subsequent builds will be cached, add --no-cache to rebuild from sctatch.
 
-## Test local
-    docker-compose -f docker-compose-test.yml up
-    # Use -d to detach and run in background
 
 ## Run local
     docker-compose up 
     # Use -d to detach and run in background
+    # Note subsequent runs will re-use the image, add --build to rebuild image. 
+    
