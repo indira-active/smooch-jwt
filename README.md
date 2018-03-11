@@ -29,14 +29,13 @@ Create a .env file with the following variables set:
 
 
 # Production
-## Build local
+## Build & test local
     docker-compose build
-    # Note this will be cached. Re-run build or add --build to compose up commands to rebuild.
+    # Note subsequent builds will be cached, add --no-cache to rebuild from sctatch.
 
-## Test local
-    docker-compose -f docker-compose-test.yml up
-    # Use -d to detach and run in background
 
 ## Run local
     docker-compose up 
     # Use -d to detach and run in background
+    # Note subsequent runs will re-use the image, add --build to rebuild image. 
+    
