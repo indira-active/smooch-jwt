@@ -1,11 +1,13 @@
-version: '3'
+version: '3.5'
 services:
   smooch-jwt:
     build:
       context: .
+      cache_from:
+        - smooch-jwt
       args:
         - CODECOV_TOKEN=$CODECOV_TOKEN
-    image: smooch-jwt
+    image: gcr.io/zip-zap-gateway/smooch-jwt
     volumes:
       - .:/app
     ports:
