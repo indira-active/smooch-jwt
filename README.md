@@ -15,6 +15,7 @@ Create a .env file with the following variables set:
 
     KEY_ID1  
     SECRET1
+    CODECOV_TOKEN  # Only required if building Dockerfile locally
 
 
 # Development
