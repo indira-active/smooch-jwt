@@ -12,4 +12,7 @@ services:
       - .:/app
     ports:
       - '8080:8080'
+    environment:
+        - SECRET=$SECRET
+        - KEY_ID=$KEY_ID
     command: npm start
