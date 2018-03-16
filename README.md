@@ -6,16 +6,24 @@
 Is a node.js service that provides JWT authentication for live chat support on indiraactive.com via the Smooch.io platform.
 
 # Environment
-Dependencies:
-	npm
-	docker
-	docker-compose
+Dependencies:  
 
-Create a .env file with the following variables set:  
+    npm
+    docker
+    docker-compose  
 
-    KEY_ID1  
-    SECRET1
-    CODECOV_TOKEN  # Only required if building Dockerfile locally
+| Variable                | Description |
+|-------------------------|-------------|
+| **KEY_ID** `required to run` | Smooch.io App credentials go/smooch-secrets |
+| **SECRET** `required to run` | Smooch.io App credentials go/smooch-secrets |
+| **CODECOV_TOKEN** `required to build docker image local` | Token to submit coverage results after tests pass go/jwt-codecov-token |
+
+    # Create an copy .env file
+    cp .env.example .env
+
+    # Edit file to add applicable variables
+    # Then Set enviorment variables locally
+    source ./.env
 
 
 # Development
