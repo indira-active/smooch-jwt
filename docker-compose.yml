@@ -8,8 +8,6 @@ services:
       args:
         - CODECOV_TOKEN=$CODECOV_TOKEN
     image: gcr.io/zip-zap-gateway/smooch-jwt
-    volumes:
-      - .:/app
     ports:
       - '8080:8080'
     environment:
