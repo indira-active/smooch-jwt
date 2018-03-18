@@ -30,12 +30,18 @@ Dependencies:
 # Development
     # Install dependencies & devDependencies
     npm install
+
     # Start server
     npm start
+
     # Run tests
     npm test
+
     # Check test coverage
     npm run coverage
+    
+    # Check vulnerabilities
+    npm test
 
 
 # Production
