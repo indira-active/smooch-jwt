@@ -41,7 +41,7 @@ Dependencies:
     npm run coverage
     
     # Check vulnerabilities
-    npm test
+    npm run scan
 
 
 # Production
