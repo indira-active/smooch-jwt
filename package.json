@@ -20,7 +20,7 @@
     "njwt": "0.4.0",
     "nodeunit": "^0.11.2",
     "nyc": "^11.4.1",
-    "snyk": "^1.70.2"
+    "snyk": "^1.1024.0"
   },
   "scripts": {
     "test": "KEY_ID=app_5a70141be964c6003fe08afc SECRET=hIraqmK_mDq53XembMweqa86 mocha jwt/test.js",
